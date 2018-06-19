@@ -12,7 +12,9 @@
     "lint": "standard *.js test/*.js --fix",
     "mocha": "mocha --opts mocha.opts",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --opts mocha.opts",
-    "test": "npm run lint && npm run coverage"
+    "test": "npm run lint && npm run coverage",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "standard": {
     "sourceType": "module",
@@ -36,7 +38,8 @@
   "homepage": "https://github.com/weacast/weacast-gtiff2json",
   "dependencies": {
     "commander": "^2.9.0",
-    "geo-pixel-stream": "^0.4.0"
+    "geo-pixel-stream": "^0.4.0",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -44,5 +47,6 @@
     "istanbul": "^0.4.5",
     "mocha": "^3.3.0",
     "standard": "^10.0.2"
-  }
+  },
+  "snyk": true
 }
