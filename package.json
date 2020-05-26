@@ -44,6 +44,6 @@
     "chai-lint": "^0.1.1",
     "istanbul": "^0.4.5",
     "mocha": "^3.3.0",
-    "standard": "^10.0.2"
+    "standard": "^14.3.4"
   }
 }
