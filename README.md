@@ -29,6 +29,7 @@ Here's an example that converts `file.tif` into a JSON array and writes it to di
           console.error('Oh no, writing failed!', err)
           return
         }
+      })
     })
 ```
 
@@ -39,12 +40,13 @@ Here's an example that converts `file.tif` into an RLE value array and writes it
     fs = require('fs')
     
     geotiff2json('file.tif', true).then(function(data) {
-      fs.writeFile('data.json', JSON.stringify(points), function(err) {
+      fs.writeFile('data.json', JSON.stringify(data), function(err) {
         if(err) {
           console.error('Oh no, writing failed!', err)
           return
         }
         console.log('wrote ' + (data.length / 2) + ' tuples into file.')
+      })
     })
 ```
 
